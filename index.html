@@ -3,35 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K Portfolio </title>
-    <link rel="stylesheet" href="style.css">
+    <title>K Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- navbar -->
+  
+    <div id="navbar">
+        <div class="language-switcher">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="en">EN</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </div>
+
     <header>
-        <h1>Welcome to my portfolio!</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <section id="content">
+            <h1 id="title">Welcome to my portfolio!</h1>
+            <p id="description">Hello! I'm Kaman Wong, a front-end and software developer who is passionate about the challenge of translating complex ideas into intuitive interfaces.</p>
+            <a class="aboutMe-button" href="pages/aboutMe.html">Know me now !!</a>
+        </section>
+        <div class="header-image">
+            <img src="img/myPhoto.jpeg" alt="My Photo">
+        </div>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This is my portfolio, show my skill and project。</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Projects 1</li>
-            <li>Projects 2</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: 647-893-4833</p>
-        <p>Email: @wk020317gmail.com</p>
-    </section>
 </body>
 </html>
+
+<script>
+    const translations = {
+        "zh": {
+            title: "每一頁，都是故事的開端。",
+            description: "哈囉！我是 Kaman Wong，專注於前端與軟體開發，熱愛將複雜概念轉化為流暢、自然的使用體驗。"
+        },
+        "en": {
+            title: "Welcome to My Portfolio",
+            description: "Hello! I'm Kaman Wong, a front-end and software developer who is passionate about the challenge of translating complex ideas into intuitive interfaces."
+        }
+    };
+
+    fetch('components/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+    const navbarContainer = document.getElementById('navbar');
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = data;
+    const navElement = tempDiv.querySelector('nav');
+    if (navElement) {
+        navbarContainer.appendChild(navElement);
+    }
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+    function changeLanguage() {
+        const select = document.getElementById('language-select');
+        const language = select.value; 
+        updateContent(language);
+    }
+
+    function updateContent(language) {
+        const content = document.getElementById('content');
+        content.querySelector('#title').textContent = translations[language].title;
+        content.querySelector('#description').textContent = translations[language].description;
+    }
+</script>

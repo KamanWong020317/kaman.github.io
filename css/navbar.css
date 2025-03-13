@@ -1,0 +1,33 @@
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+#header-bar {
+    padding: 15px 0;
+    font-size: 24px;
+}
+
+#header-bar ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#header-bar ul li {
+    margin: 0 20px;
+}
+
+#header-bar ul li a {
+    transition: color 0.3s ease; 
+}
+
+#header-bar ul li a:hover {
+    color: #C778DD;
+}
+

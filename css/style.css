@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+html {
+    background-color: #282c33;
+    color: #ffffff;
+    font-family: "Fira Code";
+}
+
+.language-switcher select {
+    margin: 10px 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none; 
+    background-color: transparent; 
+    color: #fff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.language-switcher select:hover {
+    background-color: #C778DD;
+    color: #333; 
+}
+
+.language-switcher option {
+    background-color: #333; 
+    color: #fff; 
+}
+
+
+/* header */
+header {
+    padding: 50px 20px; 
+    display: flex;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 40px; 
+}
+
+
+#content{
+    flex: 1; 
+    max-width: 60%; 
+}
+
+#title  {
+    display: inline-flex;
+    font-size: 56px;
+    margin-bottom: 20px; 
+
+}
+
+#description {
+    font-size: 16px; 
+    color: #ABB2BF; 
+    line-height: 1.6; 
+    margin-bottom: 30px;
+
+}
+
+.aboutMe-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #282c33;
+    border: 1px solid #C778DD;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.aboutMe-button:hover {
+    background-color: #C778DD;
+}
+
+.header-image {
+    flex: 1;
+    max-width: 40%; 
+    text-align: right;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto; 
+    border-radius: 10px;
+}
