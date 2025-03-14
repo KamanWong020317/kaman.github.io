@@ -7,79 +7,78 @@
     <link rel="stylesheet" href="../css/aboutMe.css">
 </head>
 <body>
-    <header>
-            <div id="navbar"></div>
-    </header>
 
-    <aside class="sidebar">
-        <div class="profile">
-            <img src="../img/icon.jpeg" alt="My Icon" class="icon">
-            <h1 class="name">Kaman Wong</h1>
+    <div class="container">
+        <div id="navbar"></div>
+
+        <div class="sidebar">
+            <div class="profile">
+                <img src="../img/icon.jpeg" alt="My Icon" class="icon">
+                <h1 class="name">Kaman Wong</h1>
+            </div>
+    
+            <!-- navbar -->
+            <div>
+                <button class="nav-btn active" data-section="about">About</button><br/>
+                <button class="nav-btn" data-section="skills">Skills</button><br/>
+                <button class="nav-btn" data-section="design">Design</button><br/>
+                <button class="nav-btn" data-section="projects">Projects</button><br/>
+                <button class="nav-btn" data-section="contact">Contact</button><br/>
+            </div>
         </div>
 
-        <!-- navbar -->
-        <nav class="verticla-nav">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skill">Skill</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#preview">Preview</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </aside>
 
-    <main class="content">
-        <!-- About 部分 -->
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>Hello! I'm Kaman Wong, a front-end and software developer who is passionate about the challenge of translating complex ideas into intuitive interfaces.</p>
-        </section>
-
-        <!-- Skill 部分 -->
-        <section id="skill" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Vue.js</li>
-                <li>Node.js, Python</li>
-                <li>UI/UX Design</li>
-                <li>Responsive Design</li>
-            </ul>
-        </section>
-
-        <!-- Design 部分 -->
-        <section id="design" class="section">
-            <h2>Design</h2>
-            <p>Here are some of my design works:</p>
-            <div class="design-gallery">
-                <img src="img/design1.jpg" alt="Design 1">
-                <img src="img/design2.jpg" alt="Design 2">
-                <img src="img/design3.jpg" alt="Design 3">
+        <div class="content">
+            <div id="about" class="content active">👋 Hi, I'm Kaman Wong! Welcome to my portfolio.</div>
+            <div id="skills" class="content">💻 My skills: HTML, CSS, JavaScript, React, Vue.js...</div>
+            <div id="design" class="content">🎨 Here are some of my design works...</div>
+            <div id="projects" class="content">📂 Check out my projects here...</div>
+            <div id="contact" class="content">📞 Contact me at: wk020317@gmail.com</div>
             </div>
-        </section>
+    
 
-        <!-- Preview 部分 -->
-        <section id="preview" class="section">
-            <h2>Preview</h2>
-            <p>Check out some of my projects:</p>
-            <div class="project-gallery">
-                <img src="img/project1.jpg" alt="Project 1">
-                <img src="img/project2.jpg" alt="Project 2">
-                <img src="img/project3.jpg" alt="Project 3">
-            </div>
-        </section>
-
-        <!-- Contact 部分 -->
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>If you'd like to work with me, feel free to reach out!</p>
+            <!-- Skill 部分
+            <section id="skill" class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React, Vue.js</li>
+                    <li>Node.js, Python</li>
+                    <li>UI/UX Design</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </section>
+    
+            <section id="design" class="section">
+                <h2>Design</h2>
+                <p>Here are some of my design works:</p>
+                <div class="design-gallery">
+                    <img src="img/design1.jpg" alt="Design 1">
+                    <img src="img/design2.jpg" alt="Design 2">
+                    <img src="img/design3.jpg" alt="Design 3">
+                </div>
+            </section>
+    
+            <section id="preview" class="section">
+                <h2>Preview</h2>
+                <p>Check out some of my projects:</p>
+                <div class="project-gallery">
+                    <img src="img/project1.jpg" alt="Project 1">
+                    <img src="img/project2.jpg" alt="Project 2">
+                    <img src="img/project3.jpg" alt="Project 3">
+                </div>
+            </section>
+    
+            <section id="contact" class="section">
                 <h2>Contact</h2>
-                <p>Phone: 647-893-4833</p>
-                <p>Email: @wk020317gmail.com</p>
-        </section>
-    </main>
-
+                <p>If you'd like to work with me, feel free to reach out!</p>
+                    <h2>Contact</h2>
+                    <p>Phone: 647-893-4833</p>
+                    <p>Email: @wk020317gmail.com</p>
+            </section>
+        </div> -->
+        <div id="footer"></div>
+    </div>
     <!-- JavaScript file -->
     <script src="aboutMe.js"></script>
 </body>
