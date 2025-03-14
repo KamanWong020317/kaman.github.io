@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K Portfolio</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- navbar -->
-    <div id="navbar">
-        <div class="language-switcher">
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="en">EN</option>
-                <option value="zh">中文</option>
-            </select>
-        </div>
+    <div class="language-switcher">
+        <select id="language-select" onchange="changeLanguage()">
+            <option value="en">EN</option>
+            <option value="zh">中文</option>
+        </select>
     </div>
+    <div id="navbar"></div>
 
     <header>
         <section id="content">
             <h1 id="title">Welcome to my portfolio!</h1>
             <p id="description">Hello! I'm Kaman Wong, a UI/UX and software developer who is passionate about the challenge of translating complex ideas into intuitive interfaces.</p>
-            <a class="aboutMe-button" href="/pages/aboutMe.html">Know me now !!</a>
+            <a class="aboutMe-button" href="pages/aboutMe.html">Know me now !!</a>
         </section>
         <div class="header-image">
-            <img src="/img/myPhoto.jpeg" alt="My Photo">
+            <img src="img/myPhoto.jpeg" alt="My Photo">
         </div>
     </header>
 </body>
@@ -42,7 +41,7 @@
         }
     };
 
-    fetch('/components/navbar.html')
+    fetch('components/navbar.html')
     .then(response => response.text())
     .then(data => {
     const navbarContainer = document.getElementById('navbar');
