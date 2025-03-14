@@ -85,3 +85,24 @@ header {
     height: auto; 
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* 讓標題跟圖片上下排列 */
+        text-align: center;
+    }
+
+    #content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .header-image img {
+        width: 180px;
+    }
+
+    .language-switcher {
+        top: 5px;
+        right: 5px;
+    }
+}
