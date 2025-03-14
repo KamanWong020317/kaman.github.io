@@ -27,7 +27,7 @@
     grid-area: header;
     text-align: center;
     justify-content: left;
-    padding: 25px 0px;
+    padding: 20px 0px;
 }
 
 /*sidebar*/
@@ -37,23 +37,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 /* Icon & Name */
 .profile {
     text-align: center;
-    padding: 16px;
+    padding: 4px;
 }
 
 .profile .icon {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
 .profile .name {
-    font-size: 64px;
+    font-size: 58px;
     font-family: 'Italianno', cursive;
     padding: 24px 0px;
     border-bottom: solid 1px #C778DD;
@@ -63,7 +63,7 @@
     background: none;
     border: none;
     color: white;
-    font-size: 36px;
+    font-size: 32px;
     cursor: pointer;
     padding: 10px;
     text-align: left;
@@ -78,7 +78,6 @@
     color: #C778DD;
     font-weight: bold;
 }
-
 
 /* content */
 .container > div.content {
@@ -104,3 +103,21 @@
 .container > div.footer {
     grid-area: footer;
 } 
+
+/* about */
+.content #about{
+    text-align: left;
+    font-size: medium;
+}
+
+.content #about #dreams{
+    text-align: center;
+    font-family: 'Italianno', cursive;
+    font-size: 54px;
+
+    background: linear-gradient(90deg, #fff, #C778DD); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    background-clip: text;  
+}
+
