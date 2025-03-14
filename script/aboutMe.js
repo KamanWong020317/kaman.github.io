@@ -16,14 +16,10 @@ const navButtons = document.querySelectorAll('.nav-btn');
 
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // 移除所有按鈕的 active 樣式
             navButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active'); // 設定當前按鈕為 active
-
-            // 隱藏所有內容區塊
+            button.classList.add('active'); 
             contentSections.forEach(section => section.classList.remove('active'));
 
-            // 顯示對應的內容
             const sectionId = button.getAttribute('data-section');
             document.getElementById(sectionId).classList.add('active');
         });

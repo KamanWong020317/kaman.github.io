@@ -88,7 +88,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* 讓標題跟圖片上下排列 */
+        flex-direction: column;
         text-align: center;
     }
 
