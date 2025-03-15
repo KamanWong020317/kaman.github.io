@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <div class="projects-section">
+        <h1 class="projects-title">My Projects</h1>
+        <p class="projects-subtitle">Here are some of the projects I've worked on.</p>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="img/HRM_System_login.png" alt="HRM System">
+                <img src="img/HRM_System_menu.png" alt="HRM System">
+                <div class="project-info">
+                    <h2>HRM System</h2>
+                    <p>Developed a Human Resource Management (HRM) system featuring a secure login interface 
+                        with username and password authentication, and a comprehensive main menu for accessing 
+                        key functionalities such as the Human Resource Dashboard, Employee List, and Tax Details.</p>
+                    <div class="project-tech">
+                        <span>JAVA</span><span>Scene Builder</span>
+                    </div>
+                    <a href="https://github.com/yourusername/portfolio" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/store_Management.jpeg" alt="Store Management">
+                <div class="project-info">
+                    <h2>Store Management System</h2>
+                    <p>Developed a store management system featuring a user-friendly menu with options to browse 
+                        items, search for products, place orders, and view order details. The system includes a 
+                        product list with details such as ID, product name, price, and category.</p>
+                    <div class="project-tech">
+                        <span>C#</span>
+                    </div>
+                    <a href="https://github.com/yourusername/portfolio" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/connectFour1.png" alt="connect four game">
+                <div class="project-info">
+                    <h2>Connect Four Game</h2>
+                    <p>Developed a Connect Four game with two modes: two-player mode and single-player mode against 
+                        AI. The game allows players to enter their names and features an interactive board display. 
+                        This project demonstrates my ability to create engaging and functional games with user interaction and AI integration.</p>
+                    <div class="project-tech">
+                        <span>JAVA</span>
+                    </div>
+                    <a href="https://github.com/yourusername/portfolio" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/employee_System2.png" alt="Employee System">
+                <img src="img/employee_System1.png" alt="Employee System">
+                <div class="project-info">
+                    <h2>Employee Management System</h2>
+                    <p>Developed an Employee Management System featuring a secure login interface and a comprehensive
+                         dashboard for managing employee data. The system includes functionalities such as searching 
+                         employees by department, viewing employee lists, and adding new employees.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span><span>Node.js</span><span>React.js</span>
+                    </div>
+                    <a href="https://github.com/yourusername/portfolio" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/travel.png" alt="Travel Booking Website">
+                <div class="project-info">
+                    <h2> Travel Booking Website</h2>
+                    <p>Developed a Travel Booking Website that allows users to search for flights by entering 
+                        departure and destination locations, departure dates, and passenger details. The website 
+                        features a clean and intuitive interface, enabling users to discover new travel destinations 
+                        and plan their vacations seamlessly.</p>
+                    <div class="project-tech">
+                        <span>C#</span><span>.NET</span><span>MVC</span>
+                    </div>
+                    <a href="https://github.com/yourusername/portfolio" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+    const navbarContainer = document.getElementById('navbar');
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = data;
+    const navElement = tempDiv.querySelector('nav');
+    if (navElement) {
+        navbarContainer.appendChild(navElement);
+    }
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+</script>

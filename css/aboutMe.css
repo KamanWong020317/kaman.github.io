@@ -59,7 +59,7 @@
     border-bottom: solid 1px #C778DD;
 }
 
-.sidebar button {
+.nav-btn {
     background: none;
     border: none;
     color: white;
@@ -70,13 +70,24 @@
     transition: color 0.3s ease;
 }
 
-.sidebar button:hover {
+.nav-btn:hover {
     color: #C778DD;
 }
 
-.sidebar button.active {
+.nav-btn.active {
     color: #C778DD;
     font-weight: bold;
+}
+
+
+.aboutMe-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #282c33;
+    border: 1px solid #C778DD;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 /* content */
