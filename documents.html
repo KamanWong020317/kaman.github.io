@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Documents</title>
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <header>
+        <div id="navbar"></div>
+    </header>
+    <div class="documents-section">
+        <h1 class="documents-title">Download My Documents</h1>
+        <p class="documents-subtitle">Here you can download my Resume , Cover Letter, and other important documents.</p>
+
+        <div class="documents-list">
+            <div class="document-item">
+                <div class="document-text">
+                    <h2>📄Resume</h2>
+                    <p>A detailed overview of my skills, education, and work experience.</p>
+                </div>
+                <a href="documents/resume.pdf" download class="download-btn">Download</a>
+            </div>
+
+            <div class="document-item">
+                <div class="document-text">
+                    <h2>📜 Cover Letter</h2>
+                    <p>A professional introduction letter for job applications.</p>
+                </div>
+                <a href="documents/cover_letter.pdf" download class="download-btn">Download</a>
+            </div>
+
+            <div class="document-item">
+                <div class="document-text">
+                    <h2>📁 Additional Documents</h2>
+                    <p>Other files related to my work</p>
+                </div>
+                <a href="documents/Additional_Documents.zip" download class="download-btn">Download</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+    const navbarContainer = document.getElementById('navbar');
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = data;
+    const navElement = tempDiv.querySelector('nav');
+    if (navElement) {
+        navbarContainer.appendChild(navElement);
+    }
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+</script>
