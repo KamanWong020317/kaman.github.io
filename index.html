@@ -6,6 +6,7 @@
     <title>K Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <!-- navbar -->
@@ -27,7 +28,11 @@
             <img src="img/myPhoto.jpeg" alt="My Photo">
         </div>
     </header>
+
+    <div id="footer"></div>
 </body>
+
+
 </html>
 
 <script>
@@ -66,4 +71,11 @@
         content.querySelector('#title').textContent = translations[language].title;
         content.querySelector('#description').textContent = translations[language].description;
     }
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
 </script>

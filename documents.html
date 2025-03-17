@@ -6,6 +6,7 @@
     <title>Download Documents</title>
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -42,6 +43,7 @@
             </div>
         </div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 
@@ -59,4 +61,10 @@
     })
     .catch(error => console.error('Error loading navbar:', error));
 
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
 </script>

@@ -29,6 +29,30 @@ body, ul, li, a {
     color: #C778DD;
 }
 
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.footer-links i {
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links i:hover {
+    transform: scale(1.2);
+    color: #C778DD; 
+}
+
+
 @media (max-width: 768px) {
     nav ul {
         display: flex;
@@ -39,5 +63,14 @@ body, ul, li, a {
     nav ul li {
         display: block;
         margin: 5px 0;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-links img {
+        width: 35px;
+        height: 35px;
     }
 }

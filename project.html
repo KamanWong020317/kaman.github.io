@@ -6,6 +6,8 @@
     <title>My Projects</title>
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -29,6 +31,37 @@
                         <span>JAVA</span><span>Scene Builder</span>
                     </div>
                     <a href="https://github.com/KamanWong020317/hrm_java" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/travel.png" alt="Travel Booking Website">
+                <div class="project-info">
+                    <h2> Travel Booking Website</h2>
+                    <p>Developed a Travel Booking Website that allows users to search for flights by entering 
+                        departure and destination locations, departure dates, and passenger details. The website 
+                        features a clean and intuitive interface, enabling users to discover new travel destinations 
+                        and plan their vacations seamlessly.</p>
+                    <div class="project-tech">
+                        <span>C#</span><span>.NET</span><span>MVC</span>
+                    </div>
+                    <a href="https://github.com/KamanWong020317/travel_booking" class="repo-link" target="_blank">🔗 View Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/weather.png" alt="Weather App">
+                <div class="project-info">
+                    <h2>Weather App</h2>
+                    <p> Developed a Weather Application that provides real-time weather updates, 
+                        including temperature, humidity, and weather conditions for specified locations. 
+                        The application features a 5-day forecast and an intuitive interface for users to easily 
+                        access current and future weather information. This project highlights my ability to create 
+                        functional and user-friendly applications for real-time data display and management.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span><span>React.js</span><span>CSS</span>
+                    </div>
+                    <a href="https://github.com/KamanWong020317/weather_app" class="repo-link" target="_blank">🔗 View Repo</a>
                 </div>
             </div>
 
@@ -69,38 +102,36 @@
                          dashboard for managing employee data. The system includes functionalities such as searching 
                          employees by department, viewing employee lists, and adding new employees.</p>
                     <div class="project-tech">
-                        <span>JavaScript</span><span>Node.js</span><span>React.js</span>
+                        <span>JavaScript</span><span>Node.js</span><span>React.js</span><span>CSS</span>
                     </div>
                     <a href="https://github.com/KamanWong020317/employee_reactjs" class="repo-link" target="_blank">🔗 View Repo</a>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="img/travel.png" alt="Travel Booking Website">
                 <div class="project-info">
-                    <h2> Travel Booking Website</h2>
-                    <p>Developed a Travel Booking Website that allows users to search for flights by entering 
-                        departure and destination locations, departure dates, and passenger details. The website 
-                        features a clean and intuitive interface, enabling users to discover new travel destinations 
-                        and plan their vacations seamlessly.</p>
-                    <div class="project-tech">
-                        <span>C#</span><span>.NET</span><span>MVC</span>
-                    </div>
-                    <a href="https://github.com/KamanWong020317/travel_booking" class="repo-link" target="_blank">🔗 View Repo</a>
+                    <h2>TradeNest (In Progress)</h2>
+                    <p>Developed an Trading Platform for Schools...</p>
+                    <a href="documents/capstone/summary.docx" class="repo-link" target="_blank">🔗Project Summary</a>
+                    <a href="documents/capstone/ProjectVision.docx" class="repo-link" target="_blank">🔗Project Vision</a>
+                    <a href="documents/capstone/BusinessRequirements.docx" class="repo-link" target="_blank">🔗Project/Business Requirements</a>
+                    <a href="documents/capstone/ProjectPlan_v2.0.docx" class="repo-link" target="_blank">🔗Project Plan</a>
+                    <a href="documents/capstone/Requirements_Analysis_Design.docx" class="repo-link" target="_blank">🔗Requirements Analysis and Design</a>
+                    <a href="documents/capstone/mockup.pdf" class="repo-link" target="_blank">🔗Wireframes/Mockups</a>
+                    <a href="documents/capstone/statusReport2.docx" class="repo-link" target="_blank">🔗Status Reports </a>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-info">
                     <h2> Ongoing projects...</h2>
-                    <p>TradeNest (Capstone Project)</p>
                     <p>HocusFocus (ios app)</p>
                 </div>
             </div>
 
         </div>
     </div>
-
+    <div id="footer"></div>
 </body>
 </html>
 
@@ -117,5 +148,12 @@
     }
     })
     .catch(error => console.error('Error loading navbar:', error));
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
 
 </script>
